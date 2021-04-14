@@ -21,7 +21,7 @@ class CreateMatSpesTable extends Migration
             $table->integer('credit');
             $table->string('code_mat');
             $table->integer('niveau_id');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

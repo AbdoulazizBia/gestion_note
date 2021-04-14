@@ -17,7 +17,7 @@ class CreateNiveauxTable extends Migration
             $table->id();
             $table->string('nom_niv');
             $table->integer('cycle_id');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

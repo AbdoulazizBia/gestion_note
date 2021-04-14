@@ -18,7 +18,7 @@ class CreateSpecialitesTable extends Migration
             $table->string('nom_spe');
             $table->string('code_spe');
             $table->integer('cycle_filiere_id');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

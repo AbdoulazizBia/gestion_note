@@ -18,7 +18,7 @@ class CreateGroupeUesTable extends Migration
             $table->integer('mat_spe_id');
             $table->string('semestre');
             $table->integer('matiere_mere_id');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

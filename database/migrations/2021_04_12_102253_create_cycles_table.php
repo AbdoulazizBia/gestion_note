@@ -15,7 +15,8 @@ class CreateCyclesTable extends Migration
     {
         Schema::create('cycles', function (Blueprint $table) {
             $table->id();
-           $table->String('nom_cycle'); // $table->timestamps();
+            $table->string('nom_cycle');
+            $table->timestamps();
         });
     }
 

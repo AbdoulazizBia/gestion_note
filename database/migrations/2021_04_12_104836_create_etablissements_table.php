@@ -19,7 +19,7 @@ class CreateEtablissementsTable extends Migration
             $table->string('adresse_etab');
             $table->string('tel_etab');
             $table->string('email_etab');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

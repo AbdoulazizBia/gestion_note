@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypeNotesTable extends Migration
+class CreateDomainesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateTypeNotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_notes', function (Blueprint $table) {
+        Schema::create('domaines', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_type');
+            $table->string('nom_domaine');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateTypeNotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_notes');
+        Schema::dropIfExists('domaines');
     }
 }

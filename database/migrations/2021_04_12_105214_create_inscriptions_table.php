@@ -20,7 +20,7 @@ class CreateInscriptionsTable extends Migration
             $table->integer('specialite_id');
             $table->integer('niveau_id');
             $table->integer('user_id');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

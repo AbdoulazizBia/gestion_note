@@ -17,7 +17,7 @@ class CreateDomaineCyclesTable extends Migration
             $table->id();
             $table->integer('domaine_id');
             $table->integer('cycle_id');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

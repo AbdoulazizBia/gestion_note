@@ -22,7 +22,7 @@ class CreateEtudiantsTable extends Migration
             $table->string('region');
             $table->string('tel_etud');
             $table->string('mail_etud');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

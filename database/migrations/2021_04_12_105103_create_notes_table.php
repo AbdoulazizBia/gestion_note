@@ -24,7 +24,7 @@ class CreateNotesTable extends Migration
             //$table->foreign('mat_spe_id')->references('id')->on('Mat_spe');
             //$table->foreign('inscription_id')->references('id')->on('Inscription');
             //$table->foreign('user_id')->references('id')->on('User');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

@@ -10,6 +10,13 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function inscriptions(){
+        return $this->hasMany(Inscription::class, 'user_id');
+    }
+
+    public function notes(){
+        return $this->hasMany(Note::class, 'user_id');
+    }
     /**
      * The attributes that are mass assignable.
      *

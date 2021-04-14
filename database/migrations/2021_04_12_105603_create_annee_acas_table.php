@@ -16,7 +16,7 @@ class CreateAnneeAcasTable extends Migration
         Schema::create('annee_acas', function (Blueprint $table) {
             $table->id();
             $table->string('annee');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

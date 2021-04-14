@@ -17,7 +17,7 @@ class CreateDomaineEtabsTable extends Migration
             $table->id();
             $table->integer('etab_id');
             $table->integer('domaine_id');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 

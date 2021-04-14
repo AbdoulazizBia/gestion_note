@@ -24,7 +24,7 @@ class CreatePaiementScolaritesTable extends Migration
             $table->double('tranche4')->default(0.00);
             $table->double('tranche5')->default(0.00);
             $table->boolean('cache')->default(0);
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 
