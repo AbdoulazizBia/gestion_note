@@ -27,10 +27,10 @@ class EtablissementController extends AdminController
         $grid = new Grid(new Etablissement());
 
         $grid->column('id', __('Id'));
-        $grid->column('nom_etab', __('Nom etab'));
-        $grid->column('adresse_etab', __('Adresse etab'));
-        $grid->column('tel_etab', __('Tel etab'));
-        $grid->column('email_etab', __('Email etab'));
+        $grid->column('nom_etab', __('Nom'));
+        $grid->column('adresse_etab', __('Adresse'));
+        $grid->column('tel_etab', __('Téléphone'));
+        $grid->column('email_etab', __('Email'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -48,10 +48,10 @@ class EtablissementController extends AdminController
         $show = new Show(Etablissement::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nom_etab', __('Nom etab'));
-        $show->field('adresse_etab', __('Adresse etab'));
-        $show->field('tel_etab', __('Tel etab'));
-        $show->field('email_etab', __('Email etab'));
+        $show->field('nom_etab', __('Nom'));
+        $show->field('adresse_etab', __('Adresse'));
+        $show->field('tel_etab', __('Téléphone'));
+        $show->field('email_etab', __('Email'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -67,10 +67,10 @@ class EtablissementController extends AdminController
     {
         $form = new Form(new Etablissement());
 
-        $form->text('nom_etab', __('Nom etab'));
-        $form->text('adresse_etab', __('Adresse etab'));
-        $form->text('tel_etab', __('Tel etab'));
-        $form->text('email_etab', __('Email etab'));
+        $form->text('nom_etab', __('Nom'));
+        $form->text('adresse_etab', __('Adresse'));
+        $form->text('tel_etab', __('Téléphone'));
+        $form->text('email_etab', __('Email'));
 
         return $form;
     }

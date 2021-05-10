@@ -21,7 +21,7 @@ class CreateEtudiantsTable extends Migration
             $table->string('lieu_naiss');
             $table->string('region');
             $table->string('tel_etud');
-            $table->string('mail_etud');
+            $table->string('mail_etud')->nullable();
             $table->timestamps();
         });
     }

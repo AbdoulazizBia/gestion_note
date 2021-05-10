@@ -28,10 +28,10 @@ class NoteController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('note', __('Note'));
-        $grid->column('type_note_id', __('Type note id'));
-        $grid->column('mat_spe_id', __('Mat spe id'));
-        $grid->column('inscription_id', __('Inscription id'));
-        $grid->column('user_id', __('User id'));
+        $grid->column('type_note_id', __('Type note'));
+        $grid->column('mat_spe_id', __('Matière'));
+        $grid->column('inscription_id', __('Etudiant Inscrit'));
+        $grid->column('user_id', __('Utilisateur'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -50,10 +50,10 @@ class NoteController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('note', __('Note'));
-        $show->field('type_note_id', __('Type note id'));
-        $show->field('mat_spe_id', __('Mat spe id'));
-        $show->field('inscription_id', __('Inscription id'));
-        $show->field('user_id', __('User id'));
+        $show->field('type_note_id', __('Type note'));
+        $show->field('mat_spe_id', __('Matière'));
+        $show->field('inscription_id', __('Etudiant Inscrit'));
+        $show->field('user_id', __('Utilisateur'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -70,10 +70,10 @@ class NoteController extends AdminController
         $form = new Form(new Note());
 
         $form->decimal('note', __('Note'));
-        $form->number('type_note_id', __('Type note id'));
-        $form->number('mat_spe_id', __('Mat spe id'));
-        $form->number('inscription_id', __('Inscription id'));
-        $form->number('user_id', __('User id'));
+        $form->number('type_note_id', __('Type note'));
+        $form->number('mat_spe_id', __('Matière'));
+        $form->number('inscription_id', __('Etudiant Inscrit'));
+        $form->number('user_id', __('Utilisateur'));
 
         return $form;
     }

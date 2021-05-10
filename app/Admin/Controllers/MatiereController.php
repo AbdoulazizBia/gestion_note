@@ -27,7 +27,7 @@ class MatiereController extends AdminController
         $grid = new Grid(new Matiere());
 
         $grid->column('id', __('Id'));
-        $grid->column('intitule_mat', __('Intitule mat'));
+        $grid->column('intitule_mat', __('Intitule'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -45,7 +45,7 @@ class MatiereController extends AdminController
         $show = new Show(Matiere::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('intitule_mat', __('Intitule mat'));
+        $show->field('intitule_mat', __('Intitule'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -61,7 +61,7 @@ class MatiereController extends AdminController
     {
         $form = new Form(new Matiere());
 
-        $form->text('intitule_mat', __('Intitule mat'));
+        $form->text('intitule_mat', __('Intitule'));
 
         return $form;
     }

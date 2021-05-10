@@ -27,9 +27,9 @@ class PaiementController extends AdminController
         $grid = new Grid(new Paiement_scolarite());
 
         $grid->column('id', __('Id'));
-        $grid->column('note_id', __('Note id'));
-        $grid->column('niveau_id', __('Niveau id'));
-        $grid->column('mat_spe_id', __('Mat spe id'));
+        $grid->column('note_id', __('Note'));
+        $grid->column('niveau_id', __('Niveau'));
+        $grid->column('mat_spe_id', __('Matière'));
         $grid->column('tranche1', __('Tranche1'));
         $grid->column('tranche2', __('Tranche2'));
         $grid->column('tranche3', __('Tranche3'));
@@ -53,9 +53,9 @@ class PaiementController extends AdminController
         $show = new Show(Paiement_scolarite::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('note_id', __('Note id'));
-        $show->field('niveau_id', __('Niveau id'));
-        $show->field('mat_spe_id', __('Mat spe id'));
+        $show->field('note_id', __('Note'));
+        $show->field('niveau_id', __('Niveau'));
+        $show->field('mat_spe_id', __('Matière'));
         $show->field('tranche1', __('Tranche1'));
         $show->field('tranche2', __('Tranche2'));
         $show->field('tranche3', __('Tranche3'));
@@ -77,9 +77,9 @@ class PaiementController extends AdminController
     {
         $form = new Form(new Paiement_scolarite());
 
-        $form->number('note_id', __('Note id'));
-        $form->number('niveau_id', __('Niveau id'));
-        $form->number('mat_spe_id', __('Mat spe id'));
+        $form->number('note_id', __('Note'));
+        $form->number('niveau_id', __('Niveau'));
+        $form->number('mat_spe_id', __('Matière'));
         $form->decimal('tranche1', __('Tranche1'));
         $form->decimal('tranche2', __('Tranche2'));
         $form->decimal('tranche3', __('Tranche3'));

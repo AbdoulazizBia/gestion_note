@@ -27,7 +27,7 @@ class TypeNoteController extends AdminController
         $grid = new Grid(new Type_note());
 
         $grid->column('id', __('Id'));
-        $grid->column('nom_type', __('Nom type'));
+        $grid->column('nom_type', __('Nom'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -45,7 +45,7 @@ class TypeNoteController extends AdminController
         $show = new Show(Type_note::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nom_type', __('Nom type'));
+        $show->field('nom_type', __('Nom'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -61,7 +61,7 @@ class TypeNoteController extends AdminController
     {
         $form = new Form(new Type_note());
 
-        $form->text('nom_type', __('Nom type'));
+        $form->text('nom_type', __('Nom'));
 
         return $form;
     }

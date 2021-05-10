@@ -16,7 +16,7 @@ class CreateSpecialitesTable extends Migration
         Schema::create('specialites', function (Blueprint $table) {
             $table->id();
             $table->string('nom_spe');
-            $table->string('code_spe');
+            $table->string('code_spe')->nullable();
             $table->integer('cycle_filiere_id');
             $table->timestamps();
         });

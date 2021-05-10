@@ -27,13 +27,13 @@ class EtudiantController extends AdminController
         $grid = new Grid(new Etudiant());
 
         $grid->column('id', __('Id'));
-        $grid->column('matricule_etud', __('Matricule etud'));
-        $grid->column('nom_etud', __('Nom etud'));
-        $grid->column('date_naiss', __('Date naiss'));
-        $grid->column('lieu_naiss', __('Lieu naiss'));
-        $grid->column('region', __('Region'));
-        $grid->column('tel_etud', __('Tel etud'));
-        $grid->column('mail_etud', __('Mail etud'));
+        $grid->column('matricule_etud', __('Matricule'));
+        $grid->column('nom_etud', __('Nom et prenom'));
+        $grid->column('date_naiss', __('Date naissance'));
+        $grid->column('lieu_naiss', __('Lieu naissance'));
+        $grid->column('region', __('Région'));
+        $grid->column('tel_etud', __('Tel'));
+        $grid->column('mail_etud', __('Mail'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -51,13 +51,13 @@ class EtudiantController extends AdminController
         $show = new Show(Etudiant::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('matricule_etud', __('Matricule etud'));
-        $show->field('nom_etud', __('Nom etud'));
-        $show->field('date_naiss', __('Date naiss'));
-        $show->field('lieu_naiss', __('Lieu naiss'));
+        $show->field('matricule_etud', __('Matricule'));
+        $show->field('nom_etud', __('Nom et prenom'));
+        $show->field('date_naiss', __('Date naissance'));
+        $show->field('lieu_naiss', __('Lieu naissance'));
         $show->field('region', __('Region'));
-        $show->field('tel_etud', __('Tel etud'));
-        $show->field('mail_etud', __('Mail etud'));
+        $show->field('tel_etud', __('Tel'));
+        $show->field('mail_etud', __('Mail'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -73,13 +73,13 @@ class EtudiantController extends AdminController
     {
         $form = new Form(new Etudiant());
 
-        $form->text('matricule_etud', __('Matricule etud'));
-        $form->text('nom_etud', __('Nom etud'));
-        $form->date('date_naiss', __('Date naiss'))->default(date('Y-m-d'));
-        $form->text('lieu_naiss', __('Lieu naiss'));
+        $form->text('matricule_etud', __('Matricule'));
+        $form->text('nom_etud', __('Nom'));
+        $form->date('date_naiss', __('Date naissance'))->default(date('Y-m-d'));
+        $form->text('lieu_naiss', __('Lieu naissance'));
         $form->text('region', __('Region'));
-        $form->text('tel_etud', __('Tel etud'));
-        $form->text('mail_etud', __('Mail etud'));
+        $form->text('tel_etud', __('Tel'));
+        $form->text('mail_etud', __('Mail'));
 
         return $form;
     }

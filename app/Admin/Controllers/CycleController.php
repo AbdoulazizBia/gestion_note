@@ -27,7 +27,7 @@ class CycleController extends AdminController
         $grid = new Grid(new Cycle());
 
         $grid->column('id', __('Id'));
-        $grid->column('nom_cycle', __('Nom cycle'));
+        $grid->column('nom_cycle', __('Nom'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -45,7 +45,7 @@ class CycleController extends AdminController
         $show = new Show(Cycle::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nom_cycle', __('Nom cycle'));
+        $show->field('nom_cycle', __('Nom'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -61,7 +61,7 @@ class CycleController extends AdminController
     {
         $form = new Form(new Cycle());
 
-        $form->text('nom_cycle', __('Nom cycle'));
+        $form->text('nom_cycle', __('Nom'));
 
         return $form;
     }

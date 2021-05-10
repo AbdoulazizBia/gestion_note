@@ -27,7 +27,7 @@ class FiliereController extends AdminController
         $grid = new Grid(new Filiere());
 
         $grid->column('id', __('Id'));
-        $grid->column('nom_filiere', __('Nom filiere'));
+        $grid->column('nom_filiere', __('Nom'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -45,7 +45,7 @@ class FiliereController extends AdminController
         $show = new Show(Filiere::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('nom_filiere', __('Nom filiere'));
+        $show->field('nom_filiere', __('Nom'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -61,7 +61,7 @@ class FiliereController extends AdminController
     {
         $form = new Form(new Filiere());
 
-        $form->text('nom_filiere', __('Nom filiere'));
+        $form->text('nom_filiere', __('Nom'));
 
         return $form;
     }

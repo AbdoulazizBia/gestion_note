@@ -27,9 +27,9 @@ class GroupeUEController extends AdminController
         $grid = new Grid(new Groupe_ue());
 
         $grid->column('id', __('Id'));
-        $grid->column('mat_spe_id', __('Mat spe id'));
+        $grid->column('mat_spe_id', __('Matière'));
         $grid->column('semestre', __('Semestre'));
-        $grid->column('matiere_mere_id', __('Matiere mere id'));
+        $grid->column('matiere_mere_id', __('Matiere mere'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -47,9 +47,9 @@ class GroupeUEController extends AdminController
         $show = new Show(Groupe_ue::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('mat_spe_id', __('Mat spe id'));
+        $show->field('mat_spe_id', __('Matière'));
         $show->field('semestre', __('Semestre'));
-        $show->field('matiere_mere_id', __('Matiere mere id'));
+        $show->field('matiere_mere_id', __('Matiere mere'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -65,9 +65,9 @@ class GroupeUEController extends AdminController
     {
         $form = new Form(new Groupe_ue());
 
-        $form->number('mat_spe_id', __('Mat spe id'));
+        $form->number('mat_spe_id', __('Matière'));
         $form->text('semestre', __('Semestre'));
-        $form->number('matiere_mere_id', __('Matiere mere id'));
+        $form->number('matiere_mere_id', __('Matiere mere'));
 
         return $form;
     }
