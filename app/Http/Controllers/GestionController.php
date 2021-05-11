@@ -35,18 +35,25 @@ class GestionController extends Controller
         return view('home', $this->values );
     }
 
-    public function affichage($id_domaine, $nom_domaine, $tab){
+    public function affichage( $nom_domaine, $tab){
+
         $data = [];
+        $liste_formations = [];
         foreach ($tab as $t){
-            if ($t->nom_domaine == $nom_domaine AND $t->domaine_id==$id_domaine){
-                $data[$nom_domaine] = $tab;
+            if ($t->nom_domaine == $nom_domaine){
+
+                array_push($liste_formations,$t);
+
+
+
             }
         }
-        return $data;
+        $data[$nom_domaine] = $liste_formations;
+        return  $data;
     }
 
     public function specialite(){
-        $domaines = DB::select(' SELECT id,nom_domaine FROM domaines');
+        $domaines = Domaine::all()->pluck('nom_domaine');
         $d = Domaine::join('domaine_cycles', 'domaines.id', '=', 'domaine_cycles.domaine_id')->join('cycles', 'domaine_cycles.cycle_id', '=', 'cycles.id')
                         ->join('cycle_filieres', 'cycle_filieres.cycle_id', '=', 'cycles.id')
                         ->join('filieres', 'cycle_filieres.filiere_id', '=', 'filieres.id')
@@ -59,11 +66,21 @@ class GestionController extends Controller
 
         $fil = DB::select('SELECT DISTINCT cf.*,dc.*, f.*, c.* FROM cycle_filieres AS cf, domaine_cycles AS dc, filieres AS f, cycles AS c WHERE dc.cycle_id=cf.cycle_id AND cf.filiere_id=f.id AND c.id=cf.cycle_id AND dc.id=cf.domaine_cycle_id');
         $tab2 = [];
+        //dump($domaines);
+        $tab_formations = [];
         foreach ($domaines as $do){
-            $tab2 = $this->affichage($do->id,$do->nom_domaine, $d);
-            dump($tab2);
+            //$tab2 = $this->affichage($do->id,$do->nom_domaine, $d);
+            $tab_formations[$do] = $this->affichage($do,$d);
+
+            //dump($tab_formations[$do]);
+
         }
 
+        //$informatique = $this->affichage('Informatique', $d);
+        foreach ($tab_formations['Informatique']['Informatique'] as $f)
+        {
+            dump($f['nom_spe']);
+        }
 
         die();
         $cycle_filiere = Cycle_filiere::all();
@@ -72,7 +89,7 @@ class GestionController extends Controller
         $filieres = Filiere::all();
         $specialites = Specialite::all();
         $this->values["dc"] = $d;
-        $this->values["fil"] = $fil;
+        $this->values["affiche_domaine"] = $tab_formations;
         $this->values["domaines"] = $domaines;
         $this->values["cycle_filiere"] = $cycle_filiere;
         $this->values["domaine_cycle"] = $domaine_cycle;
