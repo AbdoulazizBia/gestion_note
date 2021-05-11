@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c09533d-aebb-4df8-bedd-afb2050fb8a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php" afterPath="$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php" afterPath="$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Cycle_filiere.php" afterPath="$PROJECT_DIR$/app/Cycle_filiere.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domaine_cycle.php" afterPath="$PROJECT_DIR$/app/Domaine_cycle.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" afterPath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
     </list>
     <ignored path="note.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,32 +43,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selection_specialite.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="selection_specialite.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding>
-                <element signature="e#215#238#0#HTML" expanded="true" />
-                <element signature="e#308#327#0#HTML" expanded="true" />
-                <element signature="e#395#418#0#HTML" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestionController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GestionController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
-                <marker date="1620742121714" expanded="true" signature="949:984" ph="SELECT id,no... domaines" />
-                <marker date="1620742121714" expanded="true" signature="1668:1675" ph="SELECT * FRO... domaine_cycle" />
-                <marker date="1620742121714" expanded="true" signature="1668:1802" ph="SELECT d.*, domaine_cycles" />
-                <marker date="1620742121714" expanded="true" signature="1984:2101" ph="SELECT d.*, domaine_cycles" />
-                <marker date="1620742121714" expanded="true" signature="1984:2199" ph="SELECT DISTI... cycle_filieres" />
+                <marker date="1620745104199" expanded="true" signature="1242:1277" ph="SELECT id,no... domaines" />
+                <marker date="1620745104199" expanded="true" signature="1959:1966" ph="SELECT * FRO... domaine_cycle" />
+                <marker date="1620745104199" expanded="true" signature="1959:2093" ph="SELECT d.*, domaine_cycles" />
+                <marker date="1620745104199" expanded="true" signature="2126:2243" ph="SELECT d.*, domaine_cycles" />
+                <marker date="1620745104199" expanded="true" signature="2126:2341" ph="SELECT DISTI... cycle_filieres" />
               </folding>
             </state>
           </provider>
@@ -115,8 +104,8 @@
         <option value="$PROJECT_DIR$/app/Cycle_filiere.php" />
         <option value="$PROJECT_DIR$/app/Domaine_cycle.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
         <option value="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
       </list>
     </option>
   </component>
@@ -160,6 +149,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -280,15 +271,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../final" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -355,11 +344,12 @@
       <workItem from="1620633569492" duration="4000" />
       <workItem from="1620639197168" duration="8330000" />
       <workItem from="1620648449813" duration="33915000" />
+      <workItem from="1620742609872" duration="2686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55336000" />
+    <option name="totallyTimeSpent" value="58022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
@@ -426,7 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="77" column="9" selection-start-line="73" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -434,7 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -442,7 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -471,7 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="34" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -500,7 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="77" column="9" selection-start-line="73" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -508,7 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,9 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-595">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="45" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="83" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,29 +739,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-            <marker date="1620742121714" expanded="true" signature="949:984" ph="SELECT id,no... domaines" />
-            <marker date="1620742121714" expanded="true" signature="1668:1675" ph="SELECT * FRO... domaine_cycle" />
-            <marker date="1620742121714" expanded="true" signature="1668:1802" ph="SELECT d.*, domaine_cycles" />
-            <marker date="1620742121714" expanded="true" signature="1984:2101" ph="SELECT d.*, domaine_cycles" />
-            <marker date="1620742121714" expanded="true" signature="1984:2199" ph="SELECT DISTI... cycle_filieres" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding>
-            <element signature="e#215#238#0#HTML" expanded="true" />
-            <element signature="e#308#327#0#HTML" expanded="true" />
-            <element signature="e#395#418#0#HTML" expanded="true" />
+            <element signature="e#40#54#0#PHP" expanded="true" />
+            <marker date="1620745104199" expanded="true" signature="1242:1277" ph="SELECT id,no... domaines" />
+            <marker date="1620745104199" expanded="true" signature="1959:1966" ph="SELECT * FRO... domaine_cycle" />
+            <marker date="1620745104199" expanded="true" signature="1959:2093" ph="SELECT d.*, domaine_cycles" />
+            <marker date="1620745104199" expanded="true" signature="2126:2243" ph="SELECT d.*, domaine_cycles" />
+            <marker date="1620745104199" expanded="true" signature="2126:2341" ph="SELECT DISTI... cycle_filieres" />
           </folding>
         </state>
       </provider>
