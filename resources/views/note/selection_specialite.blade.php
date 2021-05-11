@@ -3,12 +3,19 @@
 @section('content')
 
     <div class="liste-classe col-md-12">
-        @foreach($dc as $d)
-            <div class="col-md-6">
-                <h1 class="page-header" style="color: #0048ab;">{{$d->nom_domaine}}</h1>
-                <h2 class="page-header" style="color: red;">{{$d->nom_cycle}}</h2>
-            </div>
-        @endforeach
+        <ul>
+            @foreach($dc as $d)
+                <div class="col-md-6">
+                    <h1 class="page-header" style="color: #0048ab;">{{$d->nom_domaine}}</h1>
+                    <h2 class="page-header" style="color: red;">{{$d->nom_cycle}}</h2>
+                    <h4 class="page-header" style="color: #00a65a;">
+                        @foreach($fil as $f)
+                            <li><a href="">{{$f->nom_filiere}}</a></li>
+                        @endforeach
+                    </h4>
+                </div>
+            @endforeach
+        </ul>
     </div>
 
 {{--<div class="liste-classe col-md-12">

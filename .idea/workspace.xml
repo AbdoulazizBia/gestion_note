@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9c09533d-aebb-4df8-bedd-afb2050fb8a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php" afterPath="$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php" afterPath="$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Cycle_filiere.php" afterPath="$PROJECT_DIR$/app/Cycle_filiere.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domaine_cycle.php" afterPath="$PROJECT_DIR$/app/Domaine_cycle.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" afterPath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
     </list>
     <ignored path="note.iws" />
@@ -25,54 +30,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="programme.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/note/programme.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="e#40#54#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -87,29 +50,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
+      <file leaf-file-name="selection_specialite.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="40" column="145" selection-start-line="40" selection-start-column="145" selection-end-line="40" selection-end-column="145" />
+            <state relative-caret-position="102">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding>
-                <element signature="e#40#54#0#PHP" expanded="true" />
-                <marker date="1620659418127" expanded="true" signature="949:984" ph="SELECT id,no... domaines" />
-                <marker date="1620659418127" expanded="true" signature="1045:1052" ph="SELECT * FRO... domaine_cycle" />
-                <marker date="1620659418127" expanded="true" signature="1045:1165" ph="SELECT d.*, domaine_cycles" />
+                <element signature="e#215#238#0#HTML" expanded="true" />
+                <element signature="e#308#327#0#HTML" expanded="true" />
+                <element signature="e#395#418#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selection_specialite.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
+      <file leaf-file-name="GestionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state relative-caret-position="274">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
-                <element signature="e#190#213#0#HTML" expanded="true" />
-                <element signature="e#279#298#0#HTML" expanded="true" />
+                <element signature="e#40#54#0#PHP" expanded="true" />
+                <marker date="1620742121714" expanded="true" signature="949:984" ph="SELECT id,no... domaines" />
+                <marker date="1620742121714" expanded="true" signature="1668:1675" ph="SELECT * FRO... domaine_cycle" />
+                <marker date="1620742121714" expanded="true" signature="1668:1802" ph="SELECT d.*, domaine_cycles" />
+                <marker date="1620742121714" expanded="true" signature="1984:2101" ph="SELECT d.*, domaine_cycles" />
+                <marker date="1620742121714" expanded="true" signature="1984:2199" ph="SELECT DISTI... cycle_filieres" />
               </folding>
             </state>
           </provider>
@@ -133,19 +99,22 @@
         <option value="$PROJECT_DIR$/app/Admin/Controllers/TypeNoteController.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/FiliereController.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/CycleController.php" />
-        <option value="$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/DomaineEtabController.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/NiveauController.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/SpecialiteController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_12_104937_create_specialites_table.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/GroupeUEController.php" />
-        <option value="$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php" />
         <option value="$PROJECT_DIR$/app/Admin/Controllers/MatSpeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/note/programme.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php" />
+        <option value="$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php" />
+        <option value="$PROJECT_DIR$/app/Cycle_filiere.php" />
+        <option value="$PROJECT_DIR$/app/Domaine_cycle.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
         <option value="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
       </list>
@@ -291,6 +260,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="note" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -367,18 +354,18 @@
       <workItem from="1620052019380" duration="1214000" />
       <workItem from="1620633569492" duration="4000" />
       <workItem from="1620639197168" duration="8330000" />
-      <workItem from="1620648449813" duration="10743000" />
+      <workItem from="1620648449813" duration="33915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32164000" />
+    <option name="totallyTimeSpent" value="55336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17675781" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -414,27 +401,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/InscriptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="73" column="57" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/FiliereController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="34" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/DomaineEtabController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
@@ -460,6 +426,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="77" column="9" selection-start-line="73" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -467,6 +434,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -474,6 +442,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -502,6 +471,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="34" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -530,6 +500,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="77" column="9" selection-start-line="73" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -537,6 +508,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -638,17 +610,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SpecialiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_12_104937_create_specialites_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -673,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="34" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/DomaineEtabController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
@@ -691,13 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
           <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="77" column="9" selection-start-line="73" selection-start-column="8" selection-end-line="77" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -750,14 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/note/programme.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -766,26 +710,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/DomaineCycleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domaine_cycle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cycle_filiere.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/SpecialiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="83" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/CycleFiliereController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/note/programme.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="40" column="145" selection-start-line="40" selection-start-column="145" selection-end-line="40" selection-end-column="145" />
+        <state relative-caret-position="274">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
-            <marker date="1620659418127" expanded="true" signature="949:984" ph="SELECT id,no... domaines" />
-            <marker date="1620659418127" expanded="true" signature="1045:1052" ph="SELECT * FRO... domaine_cycle" />
-            <marker date="1620659418127" expanded="true" signature="1045:1165" ph="SELECT d.*, domaine_cycles" />
+            <marker date="1620742121714" expanded="true" signature="949:984" ph="SELECT id,no... domaines" />
+            <marker date="1620742121714" expanded="true" signature="1668:1675" ph="SELECT * FRO... domaine_cycle" />
+            <marker date="1620742121714" expanded="true" signature="1668:1802" ph="SELECT d.*, domaine_cycles" />
+            <marker date="1620742121714" expanded="true" signature="1984:2101" ph="SELECT d.*, domaine_cycles" />
+            <marker date="1620742121714" expanded="true" signature="1984:2199" ph="SELECT DISTI... cycle_filieres" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding>
-            <element signature="e#190#213#0#HTML" expanded="true" />
-            <element signature="e#279#298#0#HTML" expanded="true" />
+            <element signature="e#215#238#0#HTML" expanded="true" />
+            <element signature="e#308#327#0#HTML" expanded="true" />
+            <element signature="e#395#418#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

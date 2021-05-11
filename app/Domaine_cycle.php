@@ -16,4 +16,8 @@ class Domaine_cycle extends Model
     public function domaines(){
         return $this->belongsToMany(Domaine::class, 'domaine_id');
     }
+
+    public function cycle_filieres(){
+        return $this->belongsTo(Cycle_filiere::class, 'domaine_cycle_id');
+    }
 }

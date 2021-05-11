@@ -17,6 +17,7 @@ class CreateCycleFilieresTable extends Migration
             $table->id();
             $table->integer('cycle_id');
             $table->integer('filiere_id');
+            $table->integer('domaine_cycle_id');
             $table->timestamps();
         });
     }

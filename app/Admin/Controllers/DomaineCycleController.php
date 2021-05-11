@@ -17,7 +17,7 @@ class DomaineCycleController extends AdminController
      *
      * @var string
      */
-    protected $title = 'Domaine_cycle';
+    protected $title = 'Domaine/cycle';
 
     /**
      * Make a grid builder.
