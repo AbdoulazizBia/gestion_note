@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c09533d-aebb-4df8-bedd-afb2050fb8a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" afterPath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
     </list>
     <ignored path="note.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,27 +45,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selection_specialite.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
+      <file leaf-file-name="GestionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="382">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#54#0#PHP" expanded="true" />
+                <marker date="1621258162978" expanded="true" signature="1220:1298" ph="SELECT cf.id... cycle_filieres" />
+                <marker date="1621258162978" expanded="true" signature="2454:2461" ph="SELECT * FRO... domaine_cycle" />
+                <marker date="1621258162978" expanded="true" signature="2454:2588" ph="SELECT d.*, domaine_cycles" />
+                <marker date="1621258162978" expanded="true" signature="2621:2738" ph="SELECT d.*, domaine_cycles" />
+                <marker date="1621258162978" expanded="true" signature="2621:2836" ph="SELECT DISTI... cycle_filieres" />
+                <marker date="1621258162978" expanded="true" signature="2840:3109" ph="SELECT cf.id... cycle_filieres" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestionController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
+      <file leaf-file-name="selection_specialite.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="91" column="58" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+            <state relative-caret-position="238">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding>
-                <element signature="e#40#54#0#PHP" expanded="true" />
-                <marker date="1620747213184" expanded="true" signature="1994:2001" ph="SELECT * FRO... domaine_cycle" />
-                <marker date="1620747213184" expanded="true" signature="1994:2128" ph="SELECT d.*, domaine_cycles" />
-                <marker date="1620747213184" expanded="true" signature="2161:2278" ph="SELECT d.*, domaine_cycles" />
-                <marker date="1620747213184" expanded="true" signature="2161:2376" ph="SELECT DISTI... cycle_filieres" />
+                <element signature="e#214#237#0#HTML" expanded="true" />
+                <element signature="e#724#743#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,8 +110,8 @@
         <option value="$PROJECT_DIR$/app/Cycle_filiere.php" />
         <option value="$PROJECT_DIR$/app/Domaine_cycle.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_12_105435_create_cycle_filieres_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
+        <option value="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
       </list>
     </option>
   </component>
@@ -118,10 +125,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1040" />
-    <option name="height" value="744" />
+    <option name="x" value="-6" />
+    <option name="y" value="1" />
+    <option name="width" value="1036" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -148,8 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,6 +275,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,18 +350,19 @@
       <workItem from="1620633569492" duration="4000" />
       <workItem from="1620639197168" duration="8330000" />
       <workItem from="1620648449813" duration="33915000" />
-      <workItem from="1620742609872" duration="4539000" />
+      <workItem from="1620742609872" duration="5127000" />
+      <workItem from="1621236653319" duration="25919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59875000" />
+    <option name="totallyTimeSpent" value="86382000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
+    <frame x="-6" y="1" width="1036" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19509804" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -741,24 +749,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="382">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
+            <marker date="1621258162978" expanded="true" signature="1220:1298" ph="SELECT cf.id... cycle_filieres" />
+            <marker date="1621258162978" expanded="true" signature="2454:2461" ph="SELECT * FRO... domaine_cycle" />
+            <marker date="1621258162978" expanded="true" signature="2454:2588" ph="SELECT d.*, domaine_cycles" />
+            <marker date="1621258162978" expanded="true" signature="2621:2738" ph="SELECT d.*, domaine_cycles" />
+            <marker date="1621258162978" expanded="true" signature="2621:2836" ph="SELECT DISTI... cycle_filieres" />
+            <marker date="1621258162978" expanded="true" signature="2840:3109" ph="SELECT cf.id... cycle_filieres" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GestionController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="91" column="58" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+        <state relative-caret-position="238">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-            <marker date="1620747213184" expanded="true" signature="1994:2001" ph="SELECT * FRO... domaine_cycle" />
-            <marker date="1620747213184" expanded="true" signature="1994:2128" ph="SELECT d.*, domaine_cycles" />
-            <marker date="1620747213184" expanded="true" signature="2161:2278" ph="SELECT d.*, domaine_cycles" />
-            <marker date="1620747213184" expanded="true" signature="2161:2376" ph="SELECT DISTI... cycle_filieres" />
+            <element signature="e#214#237#0#HTML" expanded="true" />
+            <element signature="e#724#743#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

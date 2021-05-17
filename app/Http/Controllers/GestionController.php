@@ -44,8 +44,6 @@ class GestionController extends Controller
 
                 array_push($liste_formations,$t);
 
-
-
             }
         }
         $data[$nom_domaine] = $liste_formations;
@@ -54,8 +52,16 @@ class GestionController extends Controller
 
     public function specialite(){
         $domaines = Domaine::all()->pluck('nom_domaine');
-        $d = Domaine::join('domaine_cycles', 'domaines.id', '=', 'domaine_cycles.domaine_id')->join('cycles', 'domaine_cycles.cycle_id', '=', 'cycles.id')
-                        ->join('cycle_filieres', 'cycle_filieres.cycle_id', '=', 'cycles.id')
+        $domaine_cycle = Domaine_cycle::all();
+
+        $d = Domaine::join('domaine_cycles', 'domaines.id', '=', 'domaine_cycles.domaine_id')
+                        ->join('cycles', 'domaine_cycles.cycle_id', '=', 'cycles.id')
+                        ->join('cycle_filieres', function ($join) {
+                            $join->on('cycles.id', '=', 'cycle_filieres.cycle_id')
+                                ->on('domaine_cycles.id','=','cycle_filieres.domaine_cycle_id');
+                        })
+                        //->join('cycle_filieres', 'cycle_filieres.cycle_id', '=', 'cycles.id')
+                        //->join('cycle_filieres', 'cycle_filieres.domaine_cycle_id', '=', 'domaine_cycles.id')
                         ->join('filieres', 'cycle_filieres.filiere_id', '=', 'filieres.id')
                         ->join('specialites', 'cycle_filieres.id', '=', 'specialites.cycle_filiere_id')
                         ->select('domaine_cycles.id','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe')
@@ -66,29 +72,20 @@ class GestionController extends Controller
 
         $fil = DB::select('SELECT DISTINCT cf.*,dc.*, f.*, c.* FROM cycle_filieres AS cf, domaine_cycles AS dc, filieres AS f, cycles AS c WHERE dc.cycle_id=cf.cycle_id AND cf.filiere_id=f.id AND c.id=cf.cycle_id AND dc.id=cf.domaine_cycle_id');
         $tab2 = [];
-        //dump($domaines);
+
         $tab_formations = [];
         foreach ($domaines as $do){
             //$tab2 = $this->affichage($do->id,$do->nom_domaine, $d);
             $tab_formations[$do] = $this->affichage($do,$d);
-
             //dump($tab_formations[$do]);
-
         }
 
-        //$informatique = $this->affichage('Informatique', $d);
-        foreach ($tab_formations['Informatique']['Informatique'] as $f)
-        {
-            dump($f['nom_spe']);
-        }
 
-        die();
         $cycle_filiere = Cycle_filiere::all();
-        $domaine_cycle = Domaine_cycle::all();
         $niveaux = Niveau::all();
         $filieres = Filiere::all();
         $specialites = Specialite::all();
-        $this->values["dc"] = $d;
+        $this->values["dc"] = $tab_formations;
         $this->values["affiche_domaine"] = $tab_formations;
         $this->values["domaines"] = $domaines;
         $this->values["cycle_filiere"] = $cycle_filiere;
