@@ -64,7 +64,7 @@ class GestionController extends Controller
                         //->join('cycle_filieres', 'cycle_filieres.domaine_cycle_id', '=', 'domaine_cycles.id')
                         ->join('filieres', 'cycle_filieres.filiere_id', '=', 'filieres.id')
                         ->join('specialites', 'cycle_filieres.id', '=', 'specialites.cycle_filiere_id')
-                        ->select('domaine_cycles.id','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe')
+                        ->select('domaine_cycles.id','specialites.code_spe','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe')
                         ->get();
         $cycles = Cycle::all();
 //        $d = DB::select('SELECT d.*, c.*, do.* FROM domaine_cycles AS d, cycles AS c, domaines AS do WHERE d.domaine_id=do.id AND d.cycle_id=c.id GROUP BY d.id');
@@ -79,7 +79,6 @@ class GestionController extends Controller
             $tab_formations[$do] = $this->affichage($do,$d);
             //dump($tab_formations[$do]);
         }
-
 
         $cycle_filiere = Cycle_filiere::all();
         $niveaux = Niveau::all();
