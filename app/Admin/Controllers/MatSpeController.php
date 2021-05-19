@@ -35,14 +35,14 @@ class MatSpeController extends AdminController
             return $matiere->intitule_mat;
         });
         $grid->column('specialite_id', __('Specialite'))->display(function () {
-            $specialite  =  Matiere::find($this->specialite_id);
+            $specialite  =  Specialite::find($this->specialite_id);
             return $specialite->nom_spe;
         });
         $grid->column('semestre', __('Semestre'));
         $grid->column('credit', __('Credit'));
         $grid->column('code_mat', __('Code'));
         $grid->column('niveau_id', __('Niveau'))->display(function () {
-            $niveau  =  Matiere::find($this->niveau_id);
+            $niveau  =  Niveau::find($this->niveau_id);
             return $niveau->nom_niv;
         });
         $grid->column('created_at', __('Created at'));
