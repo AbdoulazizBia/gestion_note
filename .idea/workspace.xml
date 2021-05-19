@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c09533d-aebb-4df8-bedd-afb2050fb8a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin/Controllers/MatSpeController.php" afterPath="$PROJECT_DIR$/app/Admin/Controllers/MatSpeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GestionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" afterPath="$PROJECT_DIR$/resources/views/note/selection_specialite.blade.php" />
-    </list>
+    <list default="true" id="9c09533d-aebb-4df8-bedd-afb2050fb8a9" name="Default" comment="" />
     <ignored path="note.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -371,12 +366,12 @@
       <workItem from="1620742609872" duration="5127000" />
       <workItem from="1621236653319" duration="26031000" />
       <workItem from="1621328142974" duration="21260000" />
-      <workItem from="1621409071125" duration="16344000" />
+      <workItem from="1621409071125" duration="16476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124098000" />
+    <option name="totallyTimeSpent" value="124230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1036" height="733" extended-state="0" />
