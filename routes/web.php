@@ -23,4 +23,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/domaine', 'GestionController@index')->name('gestion');
 Route::get('/note/programme', 'GestionController@show')->name('programme');
 Route::get('/note/specialite', 'GestionController@specialite')->name('specialite');
-
+//Route::get('/note/matiere/{specialite_id}', 'GestionController@matieres')->name('matieres');
+//Route::get('/note/matiere/{speciailte_id}', 'GestionController@matieres')->name('matiere');
+Route::post('/note/matiere/{specialite_id}', 'GestionController@matieres')->name('matiere');

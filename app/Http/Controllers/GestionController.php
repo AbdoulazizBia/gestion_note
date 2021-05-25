@@ -7,6 +7,8 @@ use App\Cycle_filiere;
 use App\Domaine;
 use App\Domaine_cycle;
 use App\Filiere;
+use App\Mat_spe;
+use App\Matiere;
 use App\Niveau;
 use App\Specialite;
 use Illuminate\Http\Request;
@@ -64,7 +66,8 @@ class GestionController extends Controller
                         //->join('cycle_filieres', 'cycle_filieres.domaine_cycle_id', '=', 'domaine_cycles.id')
                         ->join('filieres', 'cycle_filieres.filiere_id', '=', 'filieres.id')
                         ->join('specialites', 'cycle_filieres.id', '=', 'specialites.cycle_filiere_id')
-                        ->select('domaine_cycles.id','specialites.code_spe','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe','specialites.id')
+                        ->select('cycle_filieres.cycle_id','specialites.code_spe','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe','specialites.id')
+                        //->select('domaine_cycles.id','specialites.code_spe','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe','specialites.id')
                         ->get();
         $cycles = Cycle::all();
 //        $d = DB::select('SELECT d.*, c.*, do.* FROM domaine_cycles AS d, cycles AS c, domaines AS do WHERE d.domaine_id=do.id AND d.cycle_id=c.id GROUP BY d.id');
@@ -81,9 +84,10 @@ class GestionController extends Controller
         }
 
         $cycle_filiere = Cycle_filiere::all();
-        $niveaux = Niveau::all();
+        $niveaux = Niveau::all()->groupBy('cycle_id');
         $filieres = Filiere::all();
         $specialites = Specialite::all();
+
         $this->values["dc"] = $tab_formations;
         $this->values["affiche_domaine"] = $tab_formations;
         $this->values["domaines"] = $domaines;
@@ -100,8 +104,23 @@ class GestionController extends Controller
         return view('note.programme');
     }
 
-    public function matieres($speciailte_id, $niveau_id){
+    public function matieres($specialite_id){
+        $specialite = Specialite::all()->where('id','=', $specialite_id);
+        $matieres = Matiere::all();
+        $mat = Matiere::join('mat_spes', function ($join) {
+                $join->on('matieres.id', '=', 'mat_spes.matiere_id');
+            })
+            ->join('specialites', 'specialites.id', '=', 'mat_spes.specialite_id')
+            ->join('niveaux', 'niveaux.id', '=', 'mat_spes.niveau_id')
+            //->where('specialites.id','=', $specialite_id)
+            //->select()
+            //->select('domaine_cycles.id','specialites.code_spe','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe','specialites.id')
+            ->get();
 
+        $this->values["matieres"] = $matieres;
+        $this->values["specialites"] = $specialite;
+        dump($specialite);
+        return view('note.matiere',$this->values);
     }
 
 }
