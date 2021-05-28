@@ -27,6 +27,7 @@ class GroupeUEController extends AdminController
         $grid = new Grid(new Groupe_ue());
 
         $grid->column('id', __('Id'));
+        $grid->column('nom_groupe', __('Nom'));
         $grid->column('mat_spe_id', __('Matière'));
         $grid->column('semestre', __('Semestre'));
         $grid->column('matiere_mere_id', __('Matiere mere'));
@@ -47,6 +48,7 @@ class GroupeUEController extends AdminController
         $show = new Show(Groupe_ue::findOrFail($id));
 
         $show->field('id', __('Id'));
+        $show->field('nom_groupe', __('Nom'));
         $show->field('mat_spe_id', __('Matière'));
         $show->field('semestre', __('Semestre'));
         $show->field('matiere_mere_id', __('Matiere mere'));
@@ -65,6 +67,7 @@ class GroupeUEController extends AdminController
     {
         $form = new Form(new Groupe_ue());
 
+        $form->number('nom_groupe', __('Nom'));
         $form->number('mat_spe_id', __('Matière'));
         $form->text('semestre', __('Semestre'));
         $form->number('matiere_mere_id', __('Matiere mere'));

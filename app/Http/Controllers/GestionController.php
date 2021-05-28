@@ -104,23 +104,113 @@ class GestionController extends Controller
         return view('note.programme');
     }
 
-    public function matieres($specialite_id){
-        $specialite = Specialite::all()->where('id','=', $specialite_id);
+//----------------------------------------------------------------------------------------------------//
+
+    public function matieres(Request $request, $specialite_id){
+        $specialite = Specialite::join('cycle_filieres', 'specialites.cycle_filiere_id', '=', 'cycle_filieres.id')
+            ->join('filieres', 'cycle_filieres.filiere_id', '=', 'filieres.id')
+            ->join('cycles','cycles.id', '=', 'cycle_filieres.cycle_id')
+            ->where('specialites.id','=', $specialite_id)
+            ->select('specialites.id','specialites.nom_spe','specialites.code_spe','cycles.nom_cycle','filieres.nom_filiere')
+            ->distinct()
+            ->get();
+
+        $niv = Niveau::all()->where('id','=', $request->input('niveau'));
         $matieres = Matiere::all();
         $mat = Matiere::join('mat_spes', function ($join) {
                 $join->on('matieres.id', '=', 'mat_spes.matiere_id');
             })
             ->join('specialites', 'specialites.id', '=', 'mat_spes.specialite_id')
             ->join('niveaux', 'niveaux.id', '=', 'mat_spes.niveau_id')
-            //->where('specialites.id','=', $specialite_id)
-            //->select()
-            //->select('domaine_cycles.id','specialites.code_spe','domaines.nom_domaine','cycles.nom_cycle','filieres.nom_filiere','specialites.nom_spe','specialites.id')
+            ->where('specialites.id','=', $specialite_id)
+            ->where('mat_spes.niveau_id','=', $request->input('niveau'))
             ->get();
 
         $this->values["matieres"] = $matieres;
+        $this->values["niveaux"] = $niv;
+        $this->values["mat_spe"] = $mat;
         $this->values["specialites"] = $specialite;
-        dump($specialite);
         return view('note.matiere',$this->values);
+    }
+
+    public function register(Request $request){
+
+        $matiere = $request->input('matiere');
+        $spe_id = $request->input('spe_id');
+        $niv_id = $request->input('niveau');
+        $code = [];
+        $semestre = [];
+        $credit = [];
+
+        $specialite = Specialite::all()->where('id','=', $spe_id);
+        $niv = Niveau::all()->where('id','=', $request->input('niveau'));
+        $matieres = Matiere::all();
+
+        foreach ($matiere as $key=> $m){
+            $code[$key] = $request->input('code-'.preg_replace('/\s+/', '_', $m));
+            $semestre[$key] = $request->input('semestre-'.preg_replace('/\s+/', '_', $m));
+            $credit[$key] = $request->input('credit-'.preg_replace('/\s+/', '_', $m));
+        }
+
+        $mats = new Mat_spe();
+
+        $mats->specialite_id = $spe_id;
+        $mats->niveau_id = $niv_id;
+        foreach ($code as $keycd => $codes){
+            foreach ($semestre as $keys => $semestres){
+                foreach ($credit as $keycr => $credits){
+                    if ($keycd == $keys AND $keycd == $keycr AND $keys == $keycr){
+                        $mats->code_mat = $codes;
+                        $mats->matiere_id = $keycd;
+                        $mats->credit = $credits;
+                        $mats->semestre = $semestres;
+                        //Mat_spe::create($mats->all());
+                        $mats->save();
+                    }
+                }
+            }
+        }
+        $mat = Matiere::join('mat_spes', function ($join) {
+            $join->on('matieres.id', '=', 'mat_spes.matiere_id');
+        })
+            ->join('specialites', 'specialites.id', '=', 'mat_spes.specialite_id')
+            ->join('niveaux', 'niveaux.id', '=', 'mat_spes.niveau_id')
+            ->where('specialites.id','=', $spe_id)
+            ->where('mat_spes.niveau_id','=', $request->input('niveau'))
+            ->select('matieres.intitule_mat','mat_spes.code_mat','mat_spes.credit','mat_spes.semestre','mat_spes.id')
+            ->distinct()
+            ->get();
+
+        $this->values["matieres"] = $matieres;
+        $this->values["niveaux"] = $niv;
+        $this->values["mat_spe"] = $mat;
+        $this->values["specialites"] = $specialite;
+        return view('note.matiere',$this->values);
+
+    }
+
+    public function groupes(Request $request){
+        $spe_id = $request->input('spe_id');
+        $niv_id = $request->input('niveau');
+        $mt = Matiere::all();
+        $nom_mat = [];
+        foreach ($mt as $key=> $m){
+            $nom_mat[$m->id] = $request->input('matiere-'.preg_replace('/\s+/', '_', $m->intitule_mat));
+        }
+        $mat = Matiere::join('mat_spes', function ($join) {
+            $join->on('matieres.id', '=', 'mat_spes.matiere_id');
+        })
+            ->join('specialites', 'specialites.id', '=', 'mat_spes.specialite_id')
+            ->join('niveaux', 'niveaux.id', '=', 'mat_spes.niveau_id')
+            ->where('specialites.id','=', $spe_id)
+            ->where('mat_spes.niveau_id','=', $niv_id)
+            ->select('matieres.intitule_mat','mat_spes.code_mat','mat_spes.credit','mat_spes.semestre','mat_spes.id')
+            ->distinct()
+            ->get();
+        dump($nom_mat);
+        die();
+        $this->values["groupes"] = $mat;
+        return view('note.groupe',$this->values);
     }
 
 }
