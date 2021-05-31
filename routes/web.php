@@ -28,3 +28,4 @@ Route::get('/note/specialite', 'GestionController@specialite')->name('specialite
 Route::post('/note/matiere/{specialite_id}', 'GestionController@matieres')->name('matiere');
 Route::post('/note/enregistrement/', 'GestionController@register')->name('enregistrement');
 Route::post('/note/groupe_matiere', 'GestionController@groupes')->name('groupe');
+Route::post('/note/enregistrement_groupe', 'GestionController@saveGroup')->name('groupe_save');

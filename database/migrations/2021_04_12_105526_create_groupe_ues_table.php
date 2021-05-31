@@ -15,7 +15,6 @@ class CreateGroupeUesTable extends Migration
     {
         Schema::create('groupe_ues', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_groupe');
             $table->integer('mat_spe_id');
             $table->string('semestre');
             $table->integer('matiere_mere_id');

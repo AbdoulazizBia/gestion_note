@@ -7,6 +7,7 @@ use App\Cycle_filiere;
 use App\Domaine;
 use App\Domaine_cycle;
 use App\Filiere;
+use App\Groupe_ue;
 use App\Mat_spe;
 use App\Matiere;
 use App\Niveau;
@@ -192,6 +193,7 @@ class GestionController extends Controller
     public function groupes(Request $request){
         $spe_id = $request->input('spe_id');
         $niv_id = $request->input('niveau');
+        $n = [];
         $mt = Matiere::all();
         $nom_mat = [];
         foreach ($mt as $key=> $m){
@@ -204,13 +206,44 @@ class GestionController extends Controller
             ->join('niveaux', 'niveaux.id', '=', 'mat_spes.niveau_id')
             ->where('specialites.id','=', $spe_id)
             ->where('mat_spes.niveau_id','=', $niv_id)
-            ->select('matieres.intitule_mat','mat_spes.code_mat','mat_spes.credit','mat_spes.semestre','mat_spes.id')
+            ->select('matieres.intitule_mat','mat_spes.code_mat','mat_spes.credit','mat_spes.semestre','mat_spes.matiere_id','mat_spes.id')
             ->distinct()
             ->get();
-        dump($nom_mat);
-        die();
+
+        foreach ($nom_mat as $key => $nm){
+            if ($nm != null){
+                $n[$key] = $nm;
+            }
+        }
+
         $this->values["groupes"] = $mat;
+        $this->values["nom_groupe"] = $n;
         return view('note.groupe',$this->values);
+    }
+
+    public function saveGroup(Request $request){
+        $matieres = $request->input('matiere');
+        $id_mat_spe = $request->input('id_mat_spe');
+        $ms = Mat_spe::all();
+        $semestres = [];
+        foreach ($ms as $m){
+            $semestres[$m->matiere_id] = $request->input('semestre-'. $m->matiere_id);
+        }
+
+        $g = new Groupe_ue();
+
+        foreach ($matieres as $keym => $mt){
+            foreach ($semestres as $keys => $s){
+                if ($keym == $keys){
+                    $g->mat_spe_id = $id_mat_spe;
+                    $g->matiere_mere_id = $keym;
+                    $g->semestre = $s;
+                    $g->save();
+                }
+            }
+        }
+        dump($request);
+
     }
 
 }

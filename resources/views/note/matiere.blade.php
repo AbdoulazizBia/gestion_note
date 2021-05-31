@@ -38,33 +38,18 @@
                         <td>{{$m->credit}}</td>
                         <td>{{$m->semestre}}</td>
                         <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#groupe{{$m->code_mat}}">Groupes matiere</button>
-
-                            <div class="modal fade" role="dialog" id="groupe{{$m->code_mat}}">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h3 class="modal-title" style="text-align: center;">Groupe Matière</h3>
-                                        </div>
-
                                         <form action="{{Url('/note/groupe_matiere')}}" class="form" method="post" >
-
+                                            @foreach($specialites as $sp)
+                                                <input type="hidden" name="spe_id" value="{{$sp->id}}">
+                                            @endforeach
+                                                @foreach($niveaux as $n)
+                                                    <input type="hidden" name="niveau" value="{{$n->id}}">
+                                                @endforeach
                                             @csrf
-                                            <div class="modal-body">
-                                                <p class="font-weight-bolder">Matière</p><input type="text" name="matiere-{{$m->intitule_mat}}" value="{{$m->intitule_mat}}" class="form-control" ><br>
-                                                <p class="font-weight-bolder">Code</p><input type="text" name="code-{{$m->code_mat}}" value="{{$m->code_mat}}" class="form-control" disabled><br>
-                                                <p class="font-weight-bolder">Nom groupe</p><input type="text" name="nom-{{$m->code_mat}}" class="form-control"><br>
-                                                <input type="hidden" name="idms-{{$m->code_mat}}" value="{{$m->id}}">
-                                                <input type="hidden" name="semestre-{{$m->semestre}}" value="{{$m->semestre}}">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                                                <button name="groupe" class="btn btn-primary" onclick="">Enregistrer</button>
-                                            </div>
+                                                <input type="hidden" name="matiere-{{$m->intitule_mat}}" value="{{$m->intitule_mat}}" >
+                                                <input type="hidden" name="mat_spe_id" value="{{$m->id}}" >
+                                                <button type="submit" class="btn btn-primary">Groupes matiere</button>
                                         </form>
-                                    </div>
-                                </div>
-                            </div>
                             <button type="button" class="btn btn-danger btn-sm" onclick="window.confirm('Voulez-vous supprimer cette matière ?');">Supprimer</button>
                         </td>
                     </tr>
